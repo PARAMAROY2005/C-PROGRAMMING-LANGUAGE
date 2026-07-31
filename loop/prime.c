@@ -2,14 +2,14 @@
 
 int main()
 {
-    int n, i, flag = 1;
+    int n, i, isPrime = 1;
 
     printf("Enter a number: ");
     scanf("%d", &n);
 
     if (n <= 1)
     {
-        flag = 0;
+        isPrime = 0;
     }
     else
     {
@@ -17,16 +17,16 @@ int main()
         {
             if (n % i == 0)
             {
-                flag = 0;
+                isPrime = 0;
                 break;
             }
         }
     }
 
-    if (flag == 1)
-        printf("%d is a Prime Number", n);
+    if (isPrime)
+        printf("%d is a Prime Number.", n);
     else
-        printf("%d is Not a Prime Number", n);
+        printf("%d is Not a Prime Number.", n);
 
     return 0;
 }
