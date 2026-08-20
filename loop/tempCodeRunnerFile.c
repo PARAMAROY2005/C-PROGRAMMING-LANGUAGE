@@ -13,14 +13,14 @@ int main()
 
     if (n >= 2)
         printf("%d ", b);
-    
+
     for (i = 3; i <= n; i++)
     {
         c = a + b;
-        printf("%d ", c);
         a = b;
         b = c;
     }
+     printf("%d ", c);
 
     return 0;
 }

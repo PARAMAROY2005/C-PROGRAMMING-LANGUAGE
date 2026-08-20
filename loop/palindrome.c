@@ -16,7 +16,7 @@ int main()
         rev = rev * 10 + digit;
         n = n / 10;
     }
-
+    printf("Reverse = %d\n", rev);
     if (rev == original)
         printf("%d is a Palindrome Number.", original);
     else

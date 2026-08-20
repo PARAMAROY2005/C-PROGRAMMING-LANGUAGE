@@ -7,20 +7,21 @@ int main()
 
     printf("Enter the number of terms: ");
     scanf("%d", &n);
-
-    if (n >= 1)
+     if (n == 1)
         printf("%d ", a);
 
-    if (n >= 2)
+    else if (n == 2)
         printf("%d ", b);
+   
     
     for (i = 3; i <= n; i++)
     {
         c = a + b;
-        printf("%d ", c);
         a = b;
         b = c;
     }
+     printf("%d ", c);
+
 
     return 0;
 }
