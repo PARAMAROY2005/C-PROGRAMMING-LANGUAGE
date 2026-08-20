@@ -2,18 +2,20 @@
 
 int main()
 {
-    int n, count = 0;
+    int n, digit;
+    int product = 1;
 
     printf("Enter a number: ");
     scanf("%d", &n);
 
     while (n > 0)
     {
+        digit = n % 10;
+        product = product * digit;
         n = n / 10;
-        count++;
     }
 
-    printf("Number of digits = %d", count);
+    printf("Product of digits = %d", product);
 
     return 0;
 }
