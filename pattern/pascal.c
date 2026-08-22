@@ -2,7 +2,7 @@
 
 int main()
 {
-    int n, i, j, space, num;
+    int n, i, j, space, num=1;
 
     printf("Enter number of lines: ");
     scanf("%d", &n);
@@ -14,7 +14,6 @@ int main()
             printf(" ");
         }
 
-        num = 1;
 
         for(j = 0; j <= i; j++)
         {

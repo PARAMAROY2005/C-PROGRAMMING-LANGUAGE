@@ -22,7 +22,7 @@ int main()
 
     temp = n;
 
-    // Calculate sum of digits^digits
+    // Calculate sum of digits
     while (temp > 0)
     {
         digit = temp % 10;

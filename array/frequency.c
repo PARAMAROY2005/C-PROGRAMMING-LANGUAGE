@@ -1,52 +1,43 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
 #include <stdio.h>
 
 int main()
 {
-    int n, i, j, count;
-
-    printf("Enter the number of elements: ");
-    scanf("%d", &n);
-
-    int arr[n];
-
-    printf("Enter %d elements:\n", n);
-
-    for(i = 0; i < n; i++)
-    {
-        scanf("%d", &arr[i]);
+    int n,i,j,count;
+    printf("enter the number of element :");
+    scanf("%d",&n);
+    
+    int a[n];
+    printf("enter the element of 1st array:");
+    for (i=0;i<n;i++){
+    scanf("%d",&a[i]);
     }
-
-    printf("Frequency of each element:\n");
-
-    for(i = 0; i < n; i++)
-    {
-        count = 1;
-
-        for(j = i + 1; j < n; j++)
-        {
-            if(arr[i] == arr[j])
-            {
-                count++;
-            }
+    
+    printf("frequancy of element:");
+    for(i=0;i<n;i++){
+      count=1;
+      for(j=i+1;j<n;j++){
+        if(a[i]==a[j]){
+          count++;
         }
-
-        // Check if this element was already counted
-        int already = 0;
-
-        for(j = 0; j < i; j++)
-        {
-            if(arr[i] == arr[j])
-            {
-                already = 1;
-                break;
-            }
-        }
-
-        if(already == 0)
-        {
-            printf("%d occurs %d times\n", arr[i], count);
-        }
+      }
     }
-
+    int already=0;
+    for(j=0;j<i;j++){
+      if(a[i]==a[j]){
+        already=1;
+        break;
+      }
+    }
+    if (already==0){
+      printf("%d occurs %d times\n", a[i], count);
+    }
     return 0;
 }

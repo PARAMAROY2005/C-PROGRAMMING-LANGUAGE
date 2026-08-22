@@ -1,43 +1,43 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
 #include <stdio.h>
 
 int main()
 {
-    int n, i, same = 1;
-
-    printf("Enter the number of elements: ");
-    scanf("%d", &n);
-
-    int arr1[n], arr2[n];
-
-    printf("Enter elements of first array:\n");
-    for(i = 0; i < n; i++)
-    {
-        scanf("%d", &arr1[i]);
+    int n,i,same=1;
+    printf("enter the number of element :");
+    scanf("%d",&n);
+    
+    int a[n];
+    printf("enter the element of 1st array:");
+    for (i=0;i<n;i++){
+    scanf("%d",&a[i]);
+    }
+    int b[n];
+    printf("enter the element of 2nd array:");
+    for (i=0;i<n;i++){
+    scanf("%d",&b[i]);
+    }
+    
+    for (i=0;i<n;i++){
+      if (a[i]!=b[i]){
+        same=0;
+        break;
+      }
+      }
+    if (same==1){
+      printf("both are same.");
+    }
+    else{
+      printf("not same");
     }
 
-    printf("Enter elements of second array:\n");
-    for(i = 0; i < n; i++)
-    {
-        scanf("%d", &arr2[i]);
-    }
-
-    for(i = 0; i < n; i++)
-    {
-        if(arr1[i] != arr2[i])
-        {
-            same = 0;
-            break;
-        }
-    }
-
-    if(same == 1)
-    {
-        printf("Both arrays are same.\n");
-    }
-    else
-    {
-        printf("Both arrays are not same.\n");
-    }
 
     return 0;
 }
