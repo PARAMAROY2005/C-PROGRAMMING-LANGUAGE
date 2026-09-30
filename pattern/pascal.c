@@ -14,7 +14,7 @@ int main()
             printf(" ");
         }
 
-
+        num = 1; // Reset num for each row
         for(j = 0; j <= i; j++)
         {
             printf("%d ", num);
