@@ -1,27 +1,18 @@
 #include <stdio.h>
-
-int main() {
+int main()
+{
     char str[100];
-    int i, j = 0;
-
-    printf("Enter string: ");
+    int n, i = 0;
     scanf("%s", str);
-
-    // Find the last position
-    while(str[j] != '\0') {
-        j++;
-    }
-    j--;
-
-    // Compare characters from both ends
-    for(i = 0; i < j; i++, j--) {
-        if(str[i] != str[j]) {
-            printf("String is not Palindrome");
+    for (n = 0; str[n] != '\0'; n++);
+    for (i = 0; i < n / 2; i++)
+    {
+        if (str[i] != str[n - i - 1])
+        {
+            printf("Not Palindrome");
             return 0;
         }
     }
-
-    printf("String is Palindrome");
-
+    printf("Palindrome");
     return 0;
 }

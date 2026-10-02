@@ -1,22 +1,16 @@
-#include<stdio.h>
-
-void main(){
-    char str[100];
-    int i, j;
-
-    printf("Enter string: ");
-    scanf("%s", str);
-
-    for(i=0; str[i]!='\0'; i++){
-    }
-
-    j = i - 1;
-
-    for(i=0; i<j; i++, j--){
-        str[i] = str[i] + str[j];
-        str[j] = str[i] - str[j];
-        str[i] = str[i] - str[j];
-    }
-
-    printf("Reversed string: %s", str);
+#include <stdio.h>
+int main()
+{
+char str[100];
+int i,n=0;
+scanf("%s", str);
+for(n=0;str[n] != '\0';n++);
+for(i= 0;i<n/2; i++)
+{
+str[i]=str[i]^str[n-1-i];
+str[n-1-i]=str[i]^str[n-1-i];
+str[i]=str[i]^str[n-1-i];
+}
+printf("%s",str);
+return 0;
 }

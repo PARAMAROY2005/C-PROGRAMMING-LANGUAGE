@@ -1,12 +1,9 @@
 #include <stdio.h>
-
 int main() {
     char str[100];
     int i, count = 0, j = 0;
-
     printf("Enter string: ");
     scanf("%s", str);
-
     // Count vowels in the string
     for(i = 0; str[i] != '\0'; i++) {
         if(str[i]=='a' || str[i]=='e' || str[i]=='i' ||
@@ -16,9 +13,7 @@ int main() {
             count++;
         }
     }
-
     printf("Number of vowels = %d\n", count);
-
     // Remove vowels from the string
     for(i = 0; str[i] != '\0'; i++) {
         if(str[i]!='a' && str[i]!='e' && str[i]!='i' &&
@@ -28,11 +23,8 @@ int main() {
             str[j++] = str[i];
         }
     }
-
     // Add null character at the end
     str[j] = '\0';
-
     printf("String after removing vowels = %s", str);
-
     return 0;
 }
